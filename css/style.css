@@ -5,11 +5,11 @@
 header{
     height: 100px;
     background-color: lightgreen;
-    filter: drop-shadow(0 0 0.75rem rgb(20, 23, 220));
+    filter: drop-shadow(0 0 0.75rem rgb(71, 139, 7));
 }
 
 .grid-section{
-    background-color: dodgerblue;
+    background-color: rgb(93, 58, 50);
     height: calc(100vh - 100px);
 }
 
@@ -17,4 +17,17 @@ header{
     height: 700px;
     width: 700px;
     border: 1px solid white;
+}
+
+.cell{
+    border: 1px dotted white;
+    height: 10px;
+}
+
+.invisible{
+    display: none;
+}
+
+.visible {
+    display: block;
 }
