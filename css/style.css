@@ -16,12 +16,31 @@ header{
 #grid{
     height: 700px;
     width: 700px;
-    border: 1px solid white;
+    border: 2px solid rgb(90, 34, 34);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .cell{
-    border: 1px dotted white;
-    height: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+}
+
+.cell.easy{
+    height: calc(100% / 7);
+    width: calc(100% / 7);
+}
+
+.cell.medium{
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.cell.easy{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
 }
 
 .invisible{

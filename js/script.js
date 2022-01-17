@@ -7,10 +7,10 @@ con difficoltà 3 => tra 1 e 49
 Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro. */
 
 // ! funzione per difficoltà
-function Difficulty(cells, columns) {
+function difficulty(cells, columns) {
     const Cells = cells;
     const Columns = columns;
-    const TotalCells = Cells + Columns;
+    const TotalCells = Cells * Columns;
 
     return TotalCells;
 }
@@ -29,3 +29,12 @@ function createCells() {
 const difficultyElement = document.getElementById("difficulty");
 const buttonElement = document.getElementById("button");
 const gridElement = document.getElementById("grid");
+
+
+// ! creiamo le celle in ciclo for
+
+for (let i = 0; i < difficulty(7, 7); i++) {
+    const cell = createCells();
+
+    grid.appendChild(cell);
+}
