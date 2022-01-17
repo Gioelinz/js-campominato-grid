@@ -75,7 +75,6 @@ buttonElement.addEventListener('click', function play() {
     const selectDifficulty = difficultyElement.value;
 
     gridElement.style.display = 'flex';
-
     if (selectDifficulty == "easy") {
         easy()
     } else if (selectDifficulty == "medium") {
@@ -84,4 +83,5 @@ buttonElement.addEventListener('click', function play() {
         hard()
     }
 
+    buttonElement.disabled = true
 })
