@@ -35,6 +35,9 @@ const gridElement = document.getElementById("grid");
 
 for (let i = 0; i < difficulty(7, 7); i++) {
     const cell = createCells();
-
     grid.appendChild(cell);
+    cell.innerHTML = `<p>${i + 1}</p>`;
+    cell.addEventListener("click", () => {
+        cell.classList.toggle('clicked')
+    })
 }

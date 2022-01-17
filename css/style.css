@@ -19,6 +19,7 @@ header{
     border: 2px solid rgb(90, 34, 34);
     display: flex;
     flex-wrap: wrap;
+    color: white;
 }
 
 .cell{
@@ -26,6 +27,10 @@ header{
     cursor: pointer;
     height: calc(100% / 7);
     width: calc(100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
 
 .cell.easy{
@@ -49,4 +54,8 @@ header{
 
 .visible {
     display: block;
+}
+
+.clicked{
+    background-color: cyan;
 }
