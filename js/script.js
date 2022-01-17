@@ -15,7 +15,6 @@ function difficulty(cells, columns) {
     return TotalCells;
 }
 
-
 // ! creazione celle
 
 function createCells() {
@@ -24,6 +23,46 @@ function createCells() {
 
     return cell
 }
+
+// ! funzioni per la selezione della difficolta di gioco
+
+function easy() {
+    for (let i = 0; i < difficulty(7, 7); i++) {
+        const cell = createCells();
+        grid.appendChild(cell);
+        cell.classList.add('easy')
+        cell.innerHTML = `<p>${i + 1}</p>`;
+        cell.addEventListener("click", () => {
+            cell.classList.toggle('clicked')
+        })
+    }
+}
+
+function medium() {
+    for (let i = 0; i < difficulty(9, 9); i++) {
+        const cell = createCells();
+        grid.appendChild(cell);
+        cell.classList.add('medium')
+        cell.innerHTML = `<p>${i + 1}</p>`;
+        cell.addEventListener("click", () => {
+            cell.classList.toggle('clicked')
+        })
+    }
+}
+
+function hard() {
+    for (let i = 0; i < difficulty(10, 10); i++) {
+        const cell = createCells();
+        grid.appendChild(cell);
+        cell.classList.add('hard')
+        cell.innerHTML = `<p>${i + 1}</p>`;
+        cell.addEventListener("click", () => {
+            cell.classList.toggle('clicked')
+        })
+    }
+}
+
+
 // ! inizializzo variabili che mi servono per il DOM
 
 const difficultyElement = document.getElementById("difficulty");
@@ -31,13 +70,18 @@ const buttonElement = document.getElementById("button");
 const gridElement = document.getElementById("grid");
 
 
-// ! creiamo le celle in ciclo for
 
-for (let i = 0; i < difficulty(7, 7); i++) {
-    const cell = createCells();
-    grid.appendChild(cell);
-    cell.innerHTML = `<p>${i + 1}</p>`;
-    cell.addEventListener("click", () => {
-        cell.classList.toggle('clicked')
-    })
-}
+buttonElement.addEventListener('click', function play() {
+    const selectDifficulty = difficultyElement.value;
+
+    gridElement.style.display = 'flex';
+
+    if (selectDifficulty == "easy") {
+        easy()
+    } else if (selectDifficulty == "medium") {
+        medium()
+    } else {
+        hard()
+    }
+
+})

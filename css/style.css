@@ -17,16 +17,14 @@ header{
     height: 700px;
     width: 700px;
     border: 2px solid rgb(90, 34, 34);
-    display: flex;
     flex-wrap: wrap;
     color: white;
+    display: none;
 }
 
 .cell{
     border: 1px solid white;
     cursor: pointer;
-    height: calc(100% / 7);
-    width: calc(100% / 7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,18 +41,11 @@ header{
     width: calc(100% / 9);
 }
 
-.cell.easy{
+.cell.hard{
     height: calc(100% / 10);
     width: calc(100% / 10);
 }
 
-.invisible{
-    display: none;
-}
-
-.visible {
-    display: block;
-}
 
 .clicked{
     background-color: cyan;
