@@ -1,0 +1,20 @@
+*{
+    font-family: 'Abril Fatface', cursive;
+}
+
+header{
+    height: 100px;
+    background-color: lightgreen;
+    filter: drop-shadow(0 0 0.75rem rgb(20, 23, 220));
+}
+
+.grid-section{
+    background-color: dodgerblue;
+    height: calc(100vh - 100px);
+}
+
+#grid{
+    height: 700px;
+    width: 700px;
+    border: 1px solid white;
+}
