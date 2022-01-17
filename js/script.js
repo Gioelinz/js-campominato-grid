@@ -29,8 +29,8 @@ function createCells() {
 function easy() {
     for (let i = 0; i < difficulty(7, 7); i++) {
         const cell = createCells();
-        grid.appendChild(cell);
-        cell.classList.add('easy')
+        gridElement.appendChild(cell);
+        cell.classList.add('easy');
         cell.innerHTML = `<p>${i + 1}</p>`;
         cell.addEventListener("click", () => {
             cell.classList.toggle('clicked')
@@ -41,8 +41,8 @@ function easy() {
 function medium() {
     for (let i = 0; i < difficulty(9, 9); i++) {
         const cell = createCells();
-        grid.appendChild(cell);
-        cell.classList.add('medium')
+        gridElement.appendChild(cell);
+        cell.classList.add('medium');
         cell.innerHTML = `<p>${i + 1}</p>`;
         cell.addEventListener("click", () => {
             cell.classList.toggle('clicked')
@@ -53,8 +53,8 @@ function medium() {
 function hard() {
     for (let i = 0; i < difficulty(10, 10); i++) {
         const cell = createCells();
-        grid.appendChild(cell);
-        cell.classList.add('hard')
+        gridElement.appendChild(cell);
+        cell.classList.add('hard');
         cell.innerHTML = `<p>${i + 1}</p>`;
         cell.addEventListener("click", () => {
             cell.classList.toggle('clicked')
@@ -71,7 +71,7 @@ const gridElement = document.getElementById("grid");
 
 
 
-buttonElement.addEventListener('click', function play() {
+buttonElement.addEventListener('click', () => {
     const selectDifficulty = difficultyElement.value;
 
     gridElement.style.display = 'flex';
@@ -83,5 +83,5 @@ buttonElement.addEventListener('click', function play() {
         hard()
     }
 
-    buttonElement.disabled = true
-})
+    /* buttonElement.disabled = true */
+}, { once: true })
