@@ -72,6 +72,7 @@ const gridElement = document.getElementById("grid");
 
 
 buttonElement.addEventListener('click', () => {
+    gridElement.innerHTML = '';
     const selectDifficulty = difficultyElement.value;
 
     gridElement.style.display = 'flex';
@@ -84,4 +85,5 @@ buttonElement.addEventListener('click', () => {
     }
 
     /* buttonElement.disabled = true */
-}, { once: true })
+})
+
